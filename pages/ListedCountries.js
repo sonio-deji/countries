@@ -44,9 +44,9 @@ function ListedCountries(props) {
 </div>
 <div className='p-3'>
 <h1 className='font-bold pb-2'>{props.name}</h1>
-<p>Population: <span className='text-gray-700 dark:text-gray-300 font-light'>{props.population}</span></p>
-<p>Region:<span className='text-gray-700 dark:text-gray-300 font-light'> {props.region}</span></p>
-<p>Capital: <span className='text-gray-700 dark:text-gray-300 font-light'>{props.capital}</span></p>
+<p>Population: <span className='dark:text-gray-300 font-light'>{props.population?.toLocaleString()}</span></p>
+<p>Region:<span className='dark:text-gray-300 font-light'> {props.region}</span></p>
+<p>Capital: <span className='dark:text-gray-300 font-light'>{props.capital}</span></p>
 </div>
 </div>
 
