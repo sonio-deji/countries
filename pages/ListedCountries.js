@@ -22,7 +22,7 @@ function ListedCountries(props) {
         setmodal(true);
         setcontent({
             name: props.name,
-            population: props.population.toLocaleString(),
+            population: props.population?.toLocaleString(),
             region: props.region,
             image: props.image,
             nativeName: props.nativeName,
