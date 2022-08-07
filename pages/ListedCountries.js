@@ -28,10 +28,10 @@ function ListedCountries(props) {
             nativeName: props.nativeName,
             subRegion: props.subRegion,
             capital: props.capital,
-            currencies:props.currencies? props.currencies.map((currency, i) => (<p key={i}>{currency.name}</p>)): 'Not available',
-            languages: props.languages.map((language, i) => (<p key={i} className='pl-3 font-light'>{language.name}</p>)),
-            borderCountries: props.borderCountries? props.borderCountries.map((border, i) => (<button key={i} className='px-2 md:px-4 rounded-sm bg-gray-700'>{border}</button> )) :  <p className='pl-2'>Not available</p>,
-            topLevelDomain: props.topLevelDomain.map((topdomain, i) => (<p key={i}>{topdomain}</p>))
+            currencies:props.currencies? props.currencies?.map((currency, i) => (<p key={i}>{currency.name}</p>)): 'Not available',
+            languages: props.languages?.map((language, i) => (<p key={i} className='pl-3 font-light'>{language.name}</p>)),
+            borderCountries: props.borderCountries? props.borderCountries?.map((border, i) => (<button key={i} className='px-2 md:px-3 rounded-sm bg-gray-700'>{border}</button> )) :  <p className='pl-2'>Not available</p>,
+            topLevelDomain: props.topLevelDomain?.map((topdomain, i) => (<p key={i}>{topdomain}</p>))
         })
       }
     

@@ -4,7 +4,7 @@ import ListedCountries from './ListedCountries';
 
 const CountriesList = ({countries}) => {
   return (
-        countries.map((country, i) => {
+        countries?.map((country, i) => {
           return (
           <ListedCountries 
           key={i}
