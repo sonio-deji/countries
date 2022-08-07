@@ -28,10 +28,10 @@ function ListedCountries(props) {
             nativeName: props.nativeName,
             subRegion: props.subRegion,
             capital: props.capital,
-            currencies:props.currencies? props.currencies.map(currency => (<p>{currency.name}</p>)): 'Not available',
-            languages: props.languages.map(language => (<p className='pl-3 font-light'>{language.name}</p>)),
-            borderCountries: props.borderCountries? props.borderCountries.map(border => (<button className='px-2 md:px-4 rounded-sm bg-gray-700'>{border}</button> )) :  <p className='pl-2'>Not available</p>,
-            topLevelDomain: props.topLevelDomain.map(topdomain => (<p>{topdomain}</p>))
+            currencies:props.currencies? props.currencies.map((currency, i) => (<p key={i}>{currency.name}</p>)): 'Not available',
+            languages: props.languages.map((language, i) => (<p key={i} className='pl-3 font-light'>{language.name}</p>)),
+            borderCountries: props.borderCountries? props.borderCountries.map((border, i) => (<button key={i} className='px-2 md:px-4 rounded-sm bg-gray-700'>{border}</button> )) :  <p className='pl-2'>Not available</p>,
+            topLevelDomain: props.topLevelDomain.map((topdomain, i) => (<p key={i}>{topdomain}</p>))
         })
       }
     
@@ -40,7 +40,7 @@ function ListedCountries(props) {
     <div className={`${props.themeChanger && 'dark'}`}>
     <div className={`text-black bg-gray-200 dark:bg-gray-700 dark:text-white cursor-pointer border border-gray-400 dark:border-none rounded-lg ${props.themeChanger && 'dark'}`} onClick={setClicked} >
 <div >
-  <Image src={props.image} layout='responsive' objectFit='cover' width='100%' height='70%' className='rounded-lg' />
+  <Image alt={props.name} src={props.image} layout='responsive' objectFit='cover' width='100%' height='70%' className='rounded-lg' />
 </div>
 <div className='p-3'>
 <h1 className='font-bold pb-2'>{props.name}</h1>

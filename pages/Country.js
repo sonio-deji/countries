@@ -9,7 +9,7 @@ function Country({modal, content, onClose, themeChanger}) {
     <div className=''>
             <div  className=''>
                 <div>
-                    <Image src={content.image} width="100%" height={'70%'} className='rounded-lg' layout='responsive' />
+                    <Image alt={content.name} src={content.image} width="100%" height={'70%'} className='rounded-lg' layout='responsive' />
                 </div>
                 <h1 className=' font-bold text-center pb-8 pt-4'>{content.name}</h1>
                 <h1>Native Name: <span className='font-light'>{content.nativeName}</span></h1>
