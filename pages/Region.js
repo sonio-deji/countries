@@ -21,7 +21,7 @@ function Region({ selectChange, themeChanger}) {
         )
         )
     }
-    <option value="filter by region " disabled className='hg'>Filter by Region</option>
+    <option value="filter by region" disabled className='hg'>Filter by Region</option>
 </select>
   )
 }
