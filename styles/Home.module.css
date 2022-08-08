@@ -19,7 +19,7 @@
   .spinnerContainer {
     height: 350px;
     position: absolute;
-    top: 0px;
+    top: 40px;
     width: 100%;
     z-index: 50;
   }

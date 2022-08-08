@@ -60,10 +60,10 @@ const toggle = () => {
           <Input themeChanger={themeChanger} searchChange={searchChange} searchValue={filter} />
          <Region themeChanger={themeChanger} selectChange={selectChange}/>
           </div>
-          <div className='pt-10 px-2 grid grid-cols-2 gap-2 md:gap-6 md:grid-cols-4 relative'>
+          <div className='pt-10 px-2 grid grid-cols-2 gap-2 md:gap-8 md:grid-cols-4 relative'>
            
             {
-             regional === 0 ? <div className={styles.spinnerContainer}>
+             regional.length === 0 ? <div className={styles.spinnerContainer}>
              <div className={styles.loadingSpinner}></div>
          </div>:<CountriesList themeChanger={themeChanger} countries={filteredContent} />
              }
