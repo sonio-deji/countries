@@ -38,7 +38,7 @@ function ListedCountries(props) {
   return (
     <>
     <div className={`${props.themeChanger && 'dark'}`}>
-    <div className={`text-black bg-gray-200 dark:bg-gray-700 dark:text-white cursor-pointer border border-gray-400 max-h-96  dark:border-none rounded-lg ${props.themeChanger && 'dark'}`} onClick={setClicked} >
+    <div className={`text-black bg-gray-200 dark:bg-gray-700 dark:text-white cursor-pointer border border-gray-400 h-80 sm:h-fit md:h-fit lg:h-fit dark:border-none rounded-lg ${props.themeChanger && 'dark'}`} onClick={setClicked} >
 <div>
   <Image alt={props.name} src={props.image} layout='responsive' objectFit='cover' width='100%' height='70%' className='rounded-lg' />
 </div>

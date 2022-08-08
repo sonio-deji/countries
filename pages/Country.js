@@ -19,7 +19,7 @@ function Country({modal, content, onClose, themeChanger}) {
                 <h1 className='flex items-baseline'>Currencies: <span className='font-light pl-2'>  {content.currencies}</span></h1>
                 <h1 className='flex items-baseline text-sm md:text-base'>Languages: <span className='flex font-light pl-2'>{content.languages}</span></h1>
                 <h1 className='flex items-baseline  text-sm md:text-base'>Top level Domain: <span className='font-light pl-2'>{content.topLevelDomain}</span></h1>
-                <h1 className='flex items-center text-sm md:text-base'>Border Countries: <span className='flex justify-between w-3/5'>{content.borderCountries}</span></h1>
+                <h1 className='pt-2 text-center flex flex-col items-center text-sm md:text-base'>Border Countries: <span className='pt-5 flex justify-between w-3/5'>{content.borderCountries}</span></h1>
               
             </div>
         </div>

@@ -51,16 +51,16 @@ const toggle = () => {
       <div className={` ${themeChanger && 'dark'}`}>
       <main className={`h-fit min-h-screen dark:bg-gray-800 bg-white dark:text-white w-full pb-3 transition-all`}>
         <div className=''>
-          <div className={`flex items-center justify-between dark:bg-gray-700 bg-white pt-4 pb-4 px-8 dark:text-white text-black ${themeChanger && 'dark'}`}>
+          <div className={`flex items-center justify-between dark:bg-gray-700 bg-white pt-4 pb-4 px-2 dark:text-white text-black ${themeChanger && 'dark'}`}>
             <h1 className='font-bold'>Where in the world?</h1>
             <button onClick={toggle} className='cursor-pointer flex py-2 px-4 border justify-between rounded-lg'><span className="material-symbols-outlined">{
             mode.dark}</span>{mode.name}</button>
           </div>
-          <div className='pt-8 px-8 flex justify-between'>
+          <div className='pt-8 px-2 flex justify-between'>
           <Input themeChanger={themeChanger} searchChange={searchChange} searchValue={filter} />
          <Region themeChanger={themeChanger} selectChange={selectChange}/>
           </div>
-          <div className='pt-10 px-8 grid grid-cols-2 gap-2 md:gap-8 md:grid-cols-4 relative'>
+          <div className='pt-10 px-2 grid grid-cols-2 gap-2 md:gap-6 md:grid-cols-4 relative'>
            
             {
              regional === 0 ? <div className={styles.spinnerContainer}>
