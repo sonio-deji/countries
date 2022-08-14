@@ -35,7 +35,6 @@ function ListedCountries(props) {
         props.languages?.map((language, i) => (
           <p key={i} className="font-light">
             {`${language.name},`}
-            {console.log(language.name)}
           </p>
         ))
       ) : (
