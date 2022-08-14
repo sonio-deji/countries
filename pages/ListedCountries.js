@@ -33,8 +33,9 @@ function ListedCountries(props) {
         : "Not available",
       languages: props.languages ? (
         props.languages?.map((language, i) => (
-          <p key={i} className="pl-3 font-light">
-            {language.name}
+          <p key={i} className="font-light">
+            {`${language.name},`}
+            {console.log(language.name)}
           </p>
         ))
       ) : (

@@ -62,7 +62,7 @@ function Country({ modal, content, onClose, themeChanger }) {
               </h1>
               <h1 className="pt-2 text-center flex flex-col items-center text-sm md:text-base">
                 Border Countries:{" "}
-                <span className="pt-5 w-full flex items-center justify-evenly">
+                <span className="pt-5 w-full flex items-center justify-evenly flex-wrap gap-1">
                   {content.borderCountries}
                 </span>
               </h1>
