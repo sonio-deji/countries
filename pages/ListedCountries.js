@@ -17,7 +17,13 @@ function ListedCountries(props) {
     population: "",
     topLevelDomain: [],
   });
-
+  const lang = props.languages ? (
+    props.languages?.map((language, i) => {
+      return language.name;
+    })
+  ) : (
+    <p className="text-sm">Not available</p>
+  );
   const setClicked = () => {
     setmodal(true);
     setcontent({
@@ -31,15 +37,7 @@ function ListedCountries(props) {
       currencies: props.currencies
         ? props.currencies?.map((currency, i) => <p key={i}>{currency.name}</p>)
         : "Not available",
-      languages: props.languages ? (
-        props.languages?.map((language, i) => (
-          <p key={i} className="font-light">
-            {`${language.name},`}
-          </p>
-        ))
-      ) : (
-        <p className="text-sm">Not available</p>
-      ),
+      languages: lang,
       borderCountries: props.borderCountries ? (
         props.borderCountries?.map((border, i) => (
           <button

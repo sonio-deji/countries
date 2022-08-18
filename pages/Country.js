@@ -50,9 +50,9 @@ function Country({ modal, content, onClose, themeChanger }) {
               </h1>
               <h1 className="flex items-baseline text-sm md:text-base">
                 Languages:{" "}
-                <span className="flex font-light pl-2">
-                  {content.languages}
-                </span>
+                <span className="font-light pl-2">{`
+                  ${content.languages}
+                `}</span>
               </h1>
               <h1 className="flex items-baseline  text-sm md:text-base">
                 Top level Domain:{" "}
