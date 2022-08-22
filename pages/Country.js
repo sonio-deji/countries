@@ -2,6 +2,22 @@ import React from "react";
 import Image from "next/image";
 
 function Country({ modal, content, onClose, themeChanger }) {
+  const convertCode = (codes) => {
+    let formattedCode = [];
+    let namesToCode = new Intl.DisplayNames(["en"], { type: "region" });
+    if (codes) {
+      codes.map((form, i) => {
+        return formattedCode.push(
+          <button key={i} className="bg-gray-700 px-3 rounded-sm py-1">
+            {namesToCode.of(form.slice(0, -1))}
+          </button>
+        );
+      });
+    } else {
+      return <p>No border Countries</p>;
+    }
+    return formattedCode;
+  };
   return (
     modal && (
       <div
@@ -50,9 +66,9 @@ function Country({ modal, content, onClose, themeChanger }) {
               </h1>
               <h1 className="flex items-baseline text-sm md:text-base">
                 Languages:{" "}
-                <span className="font-light pl-2">{`
-                  ${content.languages}
-                `}</span>
+                <span className="font-light pl-2">
+                  {content.languages.join(", ")}
+                </span>
               </h1>
               <h1 className="flex items-baseline  text-sm md:text-base">
                 Top level Domain:{" "}
@@ -63,7 +79,7 @@ function Country({ modal, content, onClose, themeChanger }) {
               <h1 className="pt-2 text-center flex flex-col items-center text-sm md:text-base">
                 Border Countries:{" "}
                 <span className="pt-5 w-full flex items-center justify-evenly flex-wrap gap-1">
-                  {content.borderCountries}
+                  {convertCode(content.borderCountries)}
                 </span>
               </h1>
             </div>

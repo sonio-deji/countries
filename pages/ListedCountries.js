@@ -12,8 +12,8 @@ function ListedCountries(props) {
     subRegion: "",
     capital: "",
     currencies: [],
-    languages: [],
-    borderCountries: [],
+    languages: "",
+    borderCountries: "",
     population: "",
     topLevelDomain: [],
   });
@@ -24,6 +24,10 @@ function ListedCountries(props) {
   ) : (
     <p className="text-sm">Not available</p>
   );
+  const borderCountries = props.borderCountries?.map((border, i) => {
+    return border;
+  });
+
   const setClicked = () => {
     setmodal(true);
     setcontent({
@@ -38,18 +42,7 @@ function ListedCountries(props) {
         ? props.currencies?.map((currency, i) => <p key={i}>{currency.name}</p>)
         : "Not available",
       languages: lang,
-      borderCountries: props.borderCountries ? (
-        props.borderCountries?.map((border, i) => (
-          <button
-            key={i}
-            className="px-2 md:px-3 rounded-sm bg-gray-700 text-white"
-          >
-            {border}
-          </button>
-        ))
-      ) : (
-        <p className="text-center">Not available</p>
-      ),
+      borderCountries: borderCountries,
       topLevelDomain: props.topLevelDomain?.map((topdomain, i) => (
         <p key={i}>{topdomain}</p>
       )),
